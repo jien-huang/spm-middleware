@@ -68,7 +68,7 @@ jobs:
 
       deploy:
         - provider: script
-          script: ./scripts/tagAndPublish.sh
+          script: echo "hello"
           skip_cleanup: true
           on:
             branch: master
