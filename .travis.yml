@@ -69,12 +69,12 @@ jobs:
       deploy:
         - provider: script
           script: ./scripts/tagAndPublish.sh
-          skip_cleanup: true
+          skip_cleanup: false
           on:
             branch: main
         - provider: releases
           api_key: "$GITHUB_OAUTH_TOKEN"
           file: "./$COLLECTION_NAMESPACE-$COLLECTION_NAME-$COLLECTION_VERSION.tar.gz"
-          skip_cleanup: true
+          skip_cleanup: false
           on:
             branch: main
